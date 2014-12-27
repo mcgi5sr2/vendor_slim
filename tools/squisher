@@ -3,8 +3,6 @@
 # Squish a CM otapackage for distribution
 # cyanogen
 
-. $ANDROID_BUILD_TOP/vendor/slim/tools/colors
-
 OUT_TARGET_HOST=`uname -s`
 if [ x"$OUT_TARGET_HOST" = x"Linux" ]
 then

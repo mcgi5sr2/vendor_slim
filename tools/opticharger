@@ -15,8 +15,6 @@ BASE=`pwd`
 BRUTECRUSH="-brute"
 TMPDIR=/tmp/opticharge-$$
 
-. $ANDROID_BUILD_TOP/vendor/slim/tools/colors
-
 if [ -z "$BRUTE_PNGCRUSH" ]
 then
     BRUTECRUSH=""
