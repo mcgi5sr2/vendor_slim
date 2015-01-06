@@ -79,10 +79,14 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     PhaseBeam
 
+# Cyanogenmod Terminal app
+PRODUCT_PACKAGES += \
+    Terminal
+
 # Cyanogenmod AudioFX and Eleven player
 PRODUCT_PACKAGES += \
     Eleven \
-    AudioFX \
+    AudioFX
 
 # DSPManager
 # PRODUCT_PACKAGES += \
