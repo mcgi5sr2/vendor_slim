@@ -71,7 +71,8 @@ PRODUCT_PACKAGES += \
     Development \
     SpareParts \
     Superuser \
-    su
+    su \
+    SimpleExplorer
 
 # Optional packages
 PRODUCT_PACKAGES += \
