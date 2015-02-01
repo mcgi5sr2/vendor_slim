@@ -98,6 +98,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SlimCenter \
     SlimLauncher \
+    SimpleExplorer \
     LatinIME \
     BluetoothExt \
     DashClock
