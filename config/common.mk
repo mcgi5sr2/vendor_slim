@@ -80,14 +80,26 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     PhaseBeam
 
-# AudioFX
+# Cyanogenmod Terminal app
 PRODUCT_PACKAGES += \
+    Terminal
+
+# Cyanogenmod AudioFX and Eleven player
+PRODUCT_PACKAGES += \
+    Eleven \
     AudioFX
+
+# DSPManager
+# PRODUCT_PACKAGES += \
+    DSPManager \
+    libcyanogen-dsp \
+    audio_effects.conf
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
     SlimCenter \
     SlimLauncher \
+    SimpleExplorer \
     LatinIME \
     BluetoothExt \
     DashClock
@@ -154,13 +166,13 @@ endif
 # SlimLP first version.
 PRODUCT_VERSION_MAJOR = 5.0.2
 PRODUCT_VERSION_MINOR = alpha
-PRODUCT_VERSION_MAINTENANCE = 0.91
+PRODUCT_VERSION_MAINTENANCE = 0.91rro2
 ifdef SLIM_BUILD_EXTRA
     SLIM_POSTFIX := -$(SLIM_BUILD_EXTRA)
 endif
 ifndef SLIM_BUILD_TYPE
-    SLIM_BUILD_TYPE := UNOFFICIAL
-    PLATFORM_VERSION_CODENAME := UNOFFICIAL
+    SLIM_BUILD_TYPE := MOD
+    PLATFORM_VERSION_CODENAME := MOD
     SLIM_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
 endif
 
@@ -172,6 +184,11 @@ endif
 
 ifneq ($(INCLUDE_SLIMIRC),)
     PRODUCT_PACKAGES += SlimIRC
+endif
+
+# Chromium Prebuilt
+ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
+-include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
 endif
 
 # Set all versions
@@ -186,4 +203,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.slim.buildtype=$(SLIM_BUILD_TYPE)
 
 EXTENDED_POST_PROCESS_PROPS := vendor/slim/tools/slim_process_props.py
+
+SQUISHER_SCRIPT := vendor/slim/tools/squisher
 
