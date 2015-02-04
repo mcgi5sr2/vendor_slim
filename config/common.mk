@@ -84,6 +84,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX
 
+# Additional apps
+PRODUCT_PACKAGES += \
+	Apollo \
+	audio_effects.conf
+
 # Extra Optional packages
 PRODUCT_PACKAGES += \
     SlimCenter \
