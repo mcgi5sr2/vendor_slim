@@ -30,7 +30,7 @@ lcd_changer = {"213": "182", "240": "200",
 def mangle_build_prop(prop):
     lcd = prop.get('ro.sf.lcd_density')
     new_lcd = lcd_changer.get(lcd, lcd)
-    prop.put('ro.sf.lcd_density', new_lcd)
+    prop.put('persist.sys.lcd_density', new_lcd)
 
 
 def mangle_default_prop(prop):
