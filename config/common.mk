@@ -62,6 +62,10 @@ PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/slim/prebuilt/common/bin/sysinit:system/bin/sysinit
 
+# App for syncing bookmarks
+PRODUCT_COPY_FILES += \
+    vendor/slim/prebuilt/common/app/BookMarkSync.apk:system/app/BookMarkSync/BookMarkSync.apk
+
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
 
@@ -89,7 +93,7 @@ PRODUCT_PACKAGES += \
     SlimLauncher \
     LatinIME \
     BluetoothExt \
-    DashClock
+    DashClock 
 
 #    SlimFileManager removed until updated
 
