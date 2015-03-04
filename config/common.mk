@@ -62,6 +62,10 @@ PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/slim/prebuilt/common/bin/sysinit:system/bin/sysinit
 
+# App for syncing bookmarks
+PRODUCT_COPY_FILES += \
+    vendor/slim/prebuilt/common/app/BookMarkSync.apk:system/app/BookMarkSync/BookMarkSync.apk
+
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
 
@@ -95,7 +99,7 @@ PRODUCT_PACKAGES += \
     SlimLauncher \
     LatinIME \
     BluetoothExt \
-    DashClock
+    DashClock 
 
 #    SlimFileManager removed until updated
 
@@ -157,7 +161,7 @@ endif
 # SlimLP first version.
 PRODUCT_VERSION_MAJOR = 5.0.2
 PRODUCT_VERSION_MINOR = alpha
-PRODUCT_VERSION_MAINTENANCE = 1.0
+PRODUCT_VERSION_MAINTENANCE = 1.0.2
 ifdef SLIM_BUILD_EXTRA
     SLIM_POSTFIX := -$(SLIM_BUILD_EXTRA)
 endif
