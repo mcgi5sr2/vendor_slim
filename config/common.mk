@@ -71,7 +71,8 @@ PRODUCT_PACKAGES += \
     Development \
     SpareParts \
     Superuser \
-    su
+    su \
+    SimpleExplorer
 
 # Optional packages
 PRODUCT_PACKAGES += \
@@ -82,6 +83,11 @@ PRODUCT_PACKAGES += \
 # AudioFX
 PRODUCT_PACKAGES += \
     AudioFX
+
+# Additional apps
+PRODUCT_PACKAGES += \
+	Apollo \
+	audio_effects.conf
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
