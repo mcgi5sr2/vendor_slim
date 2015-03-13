@@ -111,7 +111,10 @@ PRODUCT_PACKAGES += \
     tune2fs \
     mount.exfat \
     fsck.exfat \
-    mkfs.exfat
+    mkfs.exfat \
+    fibmap.f2fs \
+    ntfsfix \
+    ntfs-3g
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
@@ -119,6 +122,11 @@ PRODUCT_PACKAGES += \
     libstagefright_soft_ffmpegvdec \
     libFFmpegExtractor \
     libnamparser
+
+# CM Hardware Abstraction Framework
+PRODUCT_PACKAGES += \
+    org.cyanogenmod.hardware \
+    org.cyanogenmod.hardware.xml
 
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
@@ -161,7 +169,7 @@ endif
 # SlimLP first version.
 PRODUCT_VERSION_MAJOR = 5.0.2
 PRODUCT_VERSION_MINOR = alpha
-PRODUCT_VERSION_MAINTENANCE = 1.0.2
+PRODUCT_VERSION_MAINTENANCE = 1.0.3
 ifdef SLIM_BUILD_EXTRA
     SLIM_POSTFIX := -$(SLIM_BUILD_EXTRA)
 endif
